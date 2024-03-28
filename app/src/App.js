@@ -42,12 +42,12 @@ function App() {
       <h1>Employee Data Table</h1>
       <table style={{width : "118rem" ,height : "50rem" }}>
         <tbody>
-        <tr style={{textAlign : "start" ,backgroundColor : "lightgreen",color : "white"}}>
+        <div style={{textAlign : "start" ,backgroundColor : "lightgreen",color : "white"}}>
           <th>ID</th>
           <th>Name</th>
           <th>Email</th>
           <th>Role</th>
-        </tr>
+        </div>
         {currentItems.map((obj) => (
           <tr >
             <td>{obj.id}</td>
