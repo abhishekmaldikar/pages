@@ -14,7 +14,7 @@ function App() {
       const formattedData = await response.json();
       setData(formattedData);
     } catch (e) {
-      console.log(e);
+      alert("failed to fetch data")
     }
   }
 
@@ -57,6 +57,7 @@ function App() {
       </table>
       <div style={{display : "flex" , gap : "5px"}}>
         <button onClick={prevPage} style={{height : "50px" , backgroundColor : "lightgreen" ,border : "none",borderRadius : "4px"}} disabled={currentPage === 1}>Previous</button>
+        <div style={{backgroundColor : "lightgreen" , borderRadius : "3px", width : "50px"}}>{currentPage}</div>
         <button onClick={nextPage}  style={{height : "50px" , backgroundColor : "lightgreen", border : "none",borderRadius : "4px"}} disabled={indexOfLastItem >= data.length}>Next</button>
       </div>
     </div>
