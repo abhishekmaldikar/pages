@@ -27,6 +27,7 @@ function App() {
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = data.slice(indexOfFirstItem, indexOfLastItem);
 
+
  
   const nextPage = () => {
     setCurrentPage((prev) => prev + 1);
@@ -40,6 +41,7 @@ function App() {
     <div className="App">
       <h1>Employee Data Table</h1>
       <table style={{width : "118rem" ,height : "50rem" }}>
+        <tbody>
         <tr style={{textAlign : "start" ,backgroundColor : "lightgreen",color : "white"}}>
           <th>ID</th>
           <th>Name</th>
@@ -54,6 +56,7 @@ function App() {
             <td>{obj.role}</td>
           </tr>
         ))}
+        </tbody>
       </table>
       <div style={{display : "flex" , gap : "5px"}}>
         <button onClick={prevPage} style={{height : "50px" , backgroundColor : "lightgreen" ,border : "none",borderRadius : "4px"}} disabled={currentPage === 1}>Previous</button>
